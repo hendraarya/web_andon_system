@@ -11,16 +11,16 @@ import Modal from 'react-bootstrap/Modal';
 import axios from "axios";
 
 //Import config URL API
-import { BASE_URLAPI } from '../config/URLAPI'; 
+import { BASE_URLAPI } from '../../config/URLAPI'; 
 
 //Import Audio
-import song from "../assets/audio/Alert.mp3";
-import song2 from "../assets/audio/Alarmsound.mp3";
+import song from "../../assets/audio/Alert.mp3";
+import song2 from "../../assets/audio/Alarmsound.mp3";
 import ReactAudioPlayer from 'react-audio-player';
 
 import { useTimer } from 'react-timer-hook';
 
-const AndonProduction = () => {
+const Andonlinesim = () => {
 
     //Declare useState for Play/pause audio
     const [audioStatus, changeAudioStatus] = useState(false);
@@ -37,7 +37,7 @@ const AndonProduction = () => {
     //get data status Andon 110T 2RT
     const getData_andon = () => {
         axios
-        .get(`${BASE_URLAPI}/api/getandondataline110t2rt`)
+        .get(`${BASE_URLAPI}/api/getdat_andonlinesim`)
         .then(res => {
             setGetandon1(res.data.data);
         })
@@ -64,7 +64,7 @@ const AndonProduction = () => {
 
     return(
     <Container>
-        <h1 style={{marginBottom:'5%'}}>Andon System Line 110T 2RT</h1>
+        <h1 style={{marginBottom:'5%'}}>MONITORING OF ANDON SYSTEM LINE SIM </h1>
       
         <Row style={{backgroundColor:'#59cd17'}} className="d-flex flex-row-reverse">
         {
@@ -105,9 +105,9 @@ const AndonProduction = () => {
           <Modal.Title>Hurry Up ! Operator Call You!!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h5> Line 110T 2RT, Please Check : </h5>
+          <h5> Line SIM, Please Check : </h5>
           <ReactAudioPlayer
-              src={song2}
+              src={song}
               autoPlay
               loop
               // controls
@@ -134,4 +134,4 @@ const AndonProduction = () => {
     )
 }
 
-export default AndonProduction;
+export default Andonlinesim;

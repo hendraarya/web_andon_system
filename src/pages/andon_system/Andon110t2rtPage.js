@@ -11,16 +11,16 @@ import Modal from 'react-bootstrap/Modal';
 import axios from "axios";
 
 //Import config URL API
-import { BASE_URLAPI } from '../config/URLAPI'; 
+import { BASE_URLAPI } from '../../config/URLAPI'; 
 
 //Import Audio
-import song from "../assets/audio/Alert.mp3";
-import song2 from "../assets/audio/Alarmsound.mp3";
+import song from "../../assets/audio/Alert.mp3";
+import song2 from "../../assets/audio/Alarmsound.mp3";
 import ReactAudioPlayer from 'react-audio-player';
 
 import { useTimer } from 'react-timer-hook';
 
-const AndonProduction = () => {
+const Andon110t2rt = () => {
 
     //Declare useState for Play/pause audio
     const [audioStatus, changeAudioStatus] = useState(false);
@@ -64,7 +64,7 @@ const AndonProduction = () => {
 
     return(
     <Container>
-        <h1 style={{marginBottom:'5%'}}>Andon System Line 110T 2RT</h1>
+        <h1 style={{marginBottom:'5%'}}>MONITORING OF ANDON SYSTEM LINE 110T 2RT</h1>
       
         <Row style={{backgroundColor:'#59cd17'}} className="d-flex flex-row-reverse">
         {
@@ -134,4 +134,4 @@ const AndonProduction = () => {
     )
 }
 
-export default AndonProduction;
+export default Andon110t2rt;
