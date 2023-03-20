@@ -11,10 +11,10 @@ import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
 //Import config URL API
-import { BASE_URLAPI } from "../config/URLAPI";
+import { BASE_URLAPI } from "../config-andon/URLAPI";
 
 //Import Audio
-import song from "../assets/audio/Alert.mp3";
+import song from "../assets-andon/audio/Alert.mp3";
 import ReactAudioPlayer from "react-audio-player";
 
 const AndonProduction = () => {
